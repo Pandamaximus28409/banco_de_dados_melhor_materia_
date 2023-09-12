@@ -41,3 +41,10 @@ from alunos a
 join matriculas m on m.id  = a.id
 group by curso;
 
+
+-- oitavo
+
+select produto,avg(receita) as media_produto
+from vendas
+group by produto;
+
