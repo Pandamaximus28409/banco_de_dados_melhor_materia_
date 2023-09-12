@@ -104,3 +104,8 @@ select nome, curso
 from alunos a
 right join matriculas m on m.id  = a.id;
 
+-- decimo quinto 
+
+select nome, curso
+from alunos a
+inner join matriculas m on m.id  = a.id;
