@@ -87,3 +87,13 @@ from alunos a
 right join matriculas m on m.id  = a.id;
 select * 
 from aluno_curso;
+
+
+
+-- decimo terceiro
+
+insert into autores(id, nome, nascimento)
+values (null,"JONAS","2002-12-05");
+select nome, titulo
+from  autores a
+left join  livros jk  on a.id = jk.autor_id;
