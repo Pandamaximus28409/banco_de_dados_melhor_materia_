@@ -143,3 +143,12 @@ from alunos
 left join  matriculas on alunos.id = matriculas.aluno_id
 group by alunos.id, alunos.nome;
 
+
+-- vinte
+
+select produto,count(produto) as transacoes
+from vendas 
+group by produto
+order by transacoes desc 
+limit 1
+;
