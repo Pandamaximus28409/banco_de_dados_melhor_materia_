@@ -58,3 +58,12 @@ group by produto;
 select *
 from receita_total
 where receita_t >= "10000.00";
+
+
+-- decimo
+
+create VIEW quantidade_livros as
+select nome, count(autor_id) as total_de_livros_autor
+from livros jk 
+join autores a on a.id = jk.autor_id
+group by nome;
