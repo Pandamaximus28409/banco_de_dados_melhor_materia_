@@ -14,3 +14,10 @@ select  titulo, autor_id, nome
 from livros jk 
 join autores a on a.id = jk.autor_id
 where a.nome = 'J.K. Rowling';
+
+-- quarto
+
+select aluno_id, nome, curso
+from alunos e
+left join matriculas m on m.id  = e.id
+where curso = "Engenharia de Software";
