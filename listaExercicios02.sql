@@ -1,6 +1,7 @@
-CREATE PROCEDURE sp_LivrosAteAno(IN ano_limite INT)
+CREATE PROCEDURE sp_TitulosPorCategoria(IN categoria_nome VARCHAR(100))
 BEGIN
-    SELECT Titulo
+    SELECT Livro.Titulo
     FROM Livro
-    WHERE Ano_Publicacao <= ano_limite;
+    INNER JOIN Categoria ON Livro.Categoria_ID = Categoria.Categoria_ID
+    WHERE Categoria.Nome = categoria_nome;
 END;
