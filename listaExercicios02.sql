@@ -1,4 +1,8 @@
-CREATE PROCEDURE sp_ListarAutores()
+CREATE PROCEDURE sp_LivrosPorCategoria(IN categoria_nome VARCHAR(100))
 BEGIN
-    SELECT * FROM Autor;
+    SELECT Livro.Titulo
+    FROM Livro
+    INNER JOIN Categoria ON Livro.Categoria_ID = Categoria.Categoria_ID
+    WHERE Categoria.Nome = categoria_nome;
 END;
+
